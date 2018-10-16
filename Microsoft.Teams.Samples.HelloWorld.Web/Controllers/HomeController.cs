@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using Charts;
+using Microsoft.Teams.Samples.HelloWorld.Web.ViewModels;
+using System.Web.Mvc;
 
 namespace Microsoft.Teams.Samples.HelloWorld.Web.Controllers
 {
@@ -19,7 +21,9 @@ namespace Microsoft.Teams.Samples.HelloWorld.Web.Controllers
         [Route("first")]
         public ActionResult First()
         {
-            return View();
+            return View(new ChartViewModel(
+                FakeCharts.statusCount(),
+                FakeCharts.performance()));
         }
 
         [Route("second")]

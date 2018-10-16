@@ -1,6 +1,15 @@
 ﻿<div class="font-semibold font-title">
-    This is our first tab
+    Eltern Dashboard
 </div>
 <p>
-    Welcome to Microsoft Teams Hello World sample app (C#)
+    Erstes Fake Chart
 </p>
+<div>
+    @Html.Raw(@Model.Charts[0])
+</div>
+<p>
+    Performance Übersicht
+</p>
+<div>
+    @Html.Raw(@Model.Charts[1])
+</div>
