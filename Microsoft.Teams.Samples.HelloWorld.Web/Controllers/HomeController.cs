@@ -22,14 +22,24 @@ namespace Microsoft.Teams.Samples.HelloWorld.Web.Controllers
         public ActionResult First()
         {
             return View(new ChartViewModel(
-                FakeCharts.statusCount(),
-                FakeCharts.performance()));
+                FakeCharts.performance(),
+                FakeCharts.marks(),
+                FakeCharts.nextTests()));
         }
 
         [Route("second")]
         public ActionResult Second()
         {
-            return View();
+            return View(new ChartViewModel(FakeCharts.optimalTestDates()));
+        }
+
+        [Route("third")]
+        public ActionResult Third()
+        {
+            return View(new ChartViewModel(
+                FakeCharts.performance(),
+                FakeCharts.marks(),
+                FakeCharts.nextTests()));
         }
 
         [Route("configure")]

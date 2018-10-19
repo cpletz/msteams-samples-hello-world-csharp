@@ -200,6 +200,8 @@
     <Content Include="Views\Home\First.cshtml" />
     <Content Include="Views\Home\Second.cshtml" />
     <Content Include="Views\Home\Configure.cshtml" />
+    <Content Include="Views\Home\Third.cshtml" />
+    <None Include="Properties\PublishProfiles\cplclassbookplus - Web Deploy.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Classbook.Charts\Classbook.Charts.fsproj">
